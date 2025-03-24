@@ -7,7 +7,7 @@
             Console.WriteLine("Въведете число в интервала от 10 до 100");
             int n = int.Parse(Console.ReadLine());
 
-            if (n < 10 || n > 100)
+            if (n < 10 && n > 100)
             {
                 Console.WriteLine("Въведете правилна стойност");
                 return;
@@ -28,7 +28,7 @@
             while (queue.Count > 0)
             {
                 int number = queue.Dequeue();
-                Console.WriteLine(number + " ");
+                Console.Write(number + " ");
                 if (number % 2 == 0)
                 {
                     even.Enqueue(number);
@@ -39,14 +39,14 @@
                 }
             }
 
-            Console.WriteLine("The sorted numbers are:");
+            Console.WriteLine("\nThe sorted numbers are:");
             while (even.Count > 0)
             {
-                Console.WriteLine(even.Dequeue() + " ");
+                Console.Write(even.Dequeue() + " ");
             }
             while (odd.Count > 0)
             {
-                Console.WriteLine(odd.Dequeue() + " ");
+                Console.Write(odd.Dequeue() + " ");
             }
         }
     }
